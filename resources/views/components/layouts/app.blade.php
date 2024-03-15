@@ -6,7 +6,7 @@
 
         <link rel="stylesheet" href="{{ asset('app.css') }}">
 {{--        {{dd(asset('app.css'))}}--}}
-
+        @vite('resources/css/app.css')
         <title>{{ $title ?? 'Livewire Basics' }}</title>
     </head>
     <body>
