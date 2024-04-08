@@ -10,8 +10,8 @@
         <title>{{ $title ?? 'Livewire Basics' }}</title>
     </head>
     <body>
-    <nav>
-        <a href="/">Todos</a>
+    <nav class="text-center space-x-20" >
+        <a href="/" >Todos</a>
         <a href="/counter">Counters</a>
     </nav>
 
