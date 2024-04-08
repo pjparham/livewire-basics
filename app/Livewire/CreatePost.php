@@ -22,7 +22,7 @@ class CreatePost extends Component
             'content' => $this->content,
         ]);
 
-        $this->redirect('/show-posts');
+        $this->redirect('/show-posts', navigate: true);
         $this->title = '';
         $this->content = '';
     }
