@@ -2,47 +2,31 @@
 
 namespace App\Livewire;
 
-use Illuminate\Validation\Rule;
-use Livewire\Attributes\Validate;
+use App\Livewire\Forms\ProfileForm;
 use Livewire\Component;
+use Livewire\Attributes\Validate;
+use Illuminate\Validation\Rule;
 use App\Models\User;
 
 class EditProfile extends Component
 {
-    public User $user;
-
-    #[Validate]
-    public $username = '';
-    public $bio = '';
-
+    public ProfileForm $form;
     public $showSuccessIndicator = false;
 
-    public function rules()
-    {
-        return [
-            'username' => [
-                'required',
-                Rule::unique('users')->ignore($this->user),
-            ]
-        ];
-    }
 
     public function mount()
     {
-        $this->user = User::find(1);
+        $user = User::find(1);
+        $this->form->setUser($user);
 
-        $this->username = $this->user->username;
-        $this->bio = $this->user->bio;
     }
 
     public function save()
     {
-        $this->validate();
-        $this->user->username = $this->username;
-        $this->user->bio = $this->bio;
+        $this->form->update();
 
-        $this->user->save();
-        //sleep(1);
+        sleep(1);
+
         $this->showSuccessIndicator = true;
     }
 
