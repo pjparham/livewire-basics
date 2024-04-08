@@ -10,9 +10,9 @@
         <title>{{ $title ?? 'Livewire Basics' }}</title>
     </head>
     <body>
-    <nav class="text-center space-x-20" >
-        <a href="/" >Todos</a>
-        <a href="/counter">Counters</a>
+    <nav>
+        <a href="/" @class(['current' => request()->is('/')]) >Todos</a>
+        <a href="/counter"  @class(['current' => request()->is('counter')])>Counters</a>
     </nav>
 
         {{ $slot }}
