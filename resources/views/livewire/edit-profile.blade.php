@@ -5,13 +5,26 @@
         <div class="flex flex-col gap-2">
             <h3 class="font-medium text-slate-700 text-base">Username</h3>
 
-            <input wire:model="username" class="px-3 py-2 border border-slate-300 rounded-lg">
+            <input
+                wire:model="username"
+                @class([
+                    'px-3 py-2 border rounded-lg',
+                    'border-red-500' => $errors->has('username'),
+                    'border-slate-300' => $errors->missing('username'),
+                ])
+            >
+
+            @error('username')
+            <p class="text-sm text-red-500">{{$message}}</p>
+            @enderror
         </div>
 
         <div class="flex flex-col gap-2">
             <h3 class="font-medium text-slate-700 text-base">Bio</h3>
 
             <textarea wire:model="bio" rows="4" class="px-3 py-2 border border-slate-300 rounded-lg"></textarea>
+
+
         </div>
 
         <div class="flex">
