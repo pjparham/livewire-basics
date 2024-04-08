@@ -8,3 +8,4 @@ Route::get('/', Todos::class);
 Route::get('/counter', Counter::class);
 Route::get('/show-posts', \App\Livewire\ShowPosts::class);
 Route::get('/create-post', \App\Livewire\CreatePost::class);
+Route::get('/profile', \App\Livewire\EditProfile::class);

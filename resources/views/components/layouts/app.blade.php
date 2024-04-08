@@ -10,12 +10,12 @@
         <title>{{ $title ?? 'Livewire Basics' }}</title>
     </head>
     <body>
-    <nav>
-        <a wire:navigate href="/" @class(['current' => request()->is('/')]) >Todos</a>
-        <a wire:navigate href="/counter"  @class(['current' => request()->is('counter')])>Counter</a>
-        <a wire:navigate href="/show-posts"  @class(['current' => request()->is('show-posts')])>Posts</a>
-        <a wire:navigate href="/create-post"  @class(['current' => request()->is('create-post')])>Create a Post</a>
-    </nav>
+{{--    <nav>--}}
+{{--        <a wire:navigate href="/" @class(['current' => request()->is('/')]) >Todos</a>--}}
+{{--        <a wire:navigate href="/counter"  @class(['current' => request()->is('counter')])>Counter</a>--}}
+{{--        <a wire:navigate href="/show-posts"  @class(['current' => request()->is('show-posts')])>Posts</a>--}}
+{{--        <a wire:navigate href="/create-post"  @class(['current' => request()->is('create-post')])>Create a Post</a>--}}
+{{--    </nav>--}}
 
         {{ $slot }}
     </body>
