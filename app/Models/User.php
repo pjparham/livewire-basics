@@ -29,6 +29,7 @@ class User extends Authenticatable
         'receive_emails' => 'boolean',
         'receive_updates' => 'boolean',
         'receive_offers' => 'boolean',
+        'country' => 'string',
     ];
 
     /**
