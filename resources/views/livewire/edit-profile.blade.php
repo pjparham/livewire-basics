@@ -47,6 +47,24 @@
             </div>
         </fieldset>
 
+        <fieldset x-show="$wire.form.receive_emails" class="flex flex-col gap-2">
+            <div>
+                <legend class="font-medium text-slate-700 text-base">Email Type</legend>
+            </div>
+
+            <div class="flex flex-col gap-3">
+                <label class="flex items-center gap-2">
+                    <input wire:model="form.receive_updates" type="checkbox" name="receive_emails" class="rounded">
+                    General updates
+                </label>
+
+                <label class="flex items-center gap-2">
+                    <input wire:model="form.receive_offers" type="checkbox" name="receive_emails" class="rounded">
+                    Marketing offers
+                </label>
+            </div>
+        </fieldset>
+
         <div class="flex">
             <button type="submit" class="relative w-full bg-blue-500 py-3 px-8 rounded-lg text-white font-medium disabled:cursor-not-allowed disabled:opacity-75">
                 Save

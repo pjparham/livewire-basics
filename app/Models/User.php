@@ -27,6 +27,8 @@ class User extends Authenticatable
 
     protected $casts = [
         'receive_emails' => 'boolean',
+        'receive_updates' => 'boolean',
+        'receive_offers' => 'boolean',
     ];
 
     /**
