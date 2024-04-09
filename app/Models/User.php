@@ -20,6 +20,13 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'bio',
+        'username',
+        'receive_emails',
+    ];
+
+    protected $casts = [
+        'receive_emails' => 'boolean',
     ];
 
     /**
