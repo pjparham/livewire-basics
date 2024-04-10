@@ -28,13 +28,13 @@
             <input type="checkbox" class="border rounded">
 
             <span>I agree to the</span>
-            <x-modal wire:model="showModal">
-                <x-modal.button>
+            <x-dialog wire:model="showModal">
+                <x-dialog.button>
                     <button type="button" class="underline text-blue-500"> terms of service.
                     </button>
-                </x-modal.button>
+                </x-dialog.button>
 
-                <x-modal.panel>
+                <x-dialog.panel>
                     <h2 class="text-2xl font-bold text-slate-900">Terms Of Service</h2>
 
                     <div class="mt-5 text-gray-600">
@@ -67,12 +67,12 @@
                     </div>
                     <br/>
                     <div class="flex justify-center w-full">
-                        <x-modal.close-button>
+                        <x-dialog.close-button>
                             <button class="w-30 text-center rounded-xl bg-red-500 text-white px-3 py-2 font-medium">Close</button>
-                        </x-modal.close-button>
+                        </x-dialog.close-button>
                     </div>
-                </x-modal.panel>
-            </x-modal>
+                </x-dialog.panel>
+            </x-dialog>
 
         </div>
 
